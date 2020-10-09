@@ -25,6 +25,8 @@ $ code .
 ## Technology used
 * Python language.
 * Django-3.1.2: python framework.
+* HTML.
+* BOOTSTRAP.
 
 ## How to contribute
 You can fork the project from the git hub and clone it by following the above instruction
