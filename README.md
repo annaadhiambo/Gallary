@@ -9,7 +9,7 @@
 
 ## How to access this
 
-You can access it by cloning the [Repository](https://github.com/annaadhiambo/Blog.git)
+You can access it by cloning the [Repository](https://github.com/annaadhiambo/Gallary.git)
 ```
 $ Open Terminal (Ctrl Alt T)
 $ git clone link 
