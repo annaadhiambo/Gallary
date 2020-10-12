@@ -15,6 +15,10 @@ class Image(models.Model):
 
     def delete_image(self):
         self.delete()
+
+    def update_image(self):
+        self.delete()
+        
     
     @classmethod
     def search_by_title(cls,search_term):
@@ -39,6 +43,9 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
+    def update_location(self):
+        self.delete()
+
     def __str__(self):
         return self.name
     
@@ -50,6 +57,9 @@ class Category(models.Model):
         self.save()
 
     def delete_category(self):
+        self.delete()
+
+    def update_category(self):
         self.delete()
 
     def __str__(self):
