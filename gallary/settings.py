@@ -77,8 +77,8 @@ WSGI_APPLICATION = 'gallary.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tribune',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'gallery',
         'USER': 'moringa',
     'PASSWORD':'annblue',
     }
@@ -128,3 +128,5 @@ STATICFILES_DIRS = [
 
 TIME_ZONE = 'Africa/Nairobi'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
