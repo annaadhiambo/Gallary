@@ -4,7 +4,45 @@
 {% load static %}
 {%  block content%}
 
-<h1>Fashion Gallery</h1>
+    <h1>LATEST FASHIONS IN TOWN.</h1>
+    <div class="container">
+        <div class="row">
+            {% for image in images %}
+            <div class="col-md-4">
+                <h1>{{image.title}}</h1>
+                <img src="{{image.image.url}}" class="img-responsive" alt="Image" data-toggle="modal" data-target="#{{image.id}}">
+            </div>
 
+             <!-- Modal -->
+<div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">{{ image.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="{{image.image.url}}" class="img-responsive" alt="Image">
+        </div>
+        <div class="modal-text">
+            <h5>Location: {{image.location}}</h5>
+            <h5>Category:{{image.category}}</h5>
+            <h6>Date posted: {{image.date_posted}}</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            {% endfor%}
+        </div>
+    </div>
+
+   
+    
 {%endblock%}
 
